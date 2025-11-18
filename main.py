@@ -17,6 +17,10 @@ intents.members = True  # needed to access roles
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
+@bot.command()
+async def pingtest(ctx):
+    await ctx.send("Bot is alive & ember is a god!")
+    
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
@@ -49,3 +53,4 @@ async def before_daily_message():
     await discord.utils.sleep_until(next_midnight)
 
 bot.run(TOKEN)
+
