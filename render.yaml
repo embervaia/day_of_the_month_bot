@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: day-of-the-month-bot
-    env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python main.py"
-    runtime: python-3.11.8
